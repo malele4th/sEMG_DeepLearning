@@ -35,6 +35,10 @@
 * PCA、LDA、SVD分解、流行学习LLE（非线性降维）、自编码器AE、T-SNE
 
 （6）模型训练：
+* KNN、LDA、DT、LR、NB、SVM、ANN
+* RF、AdaBoost、GBDT、LightGBM、XGBoost
+* AE、MLP、深层玻尔兹曼机、深层信念网络、CNN、RNN、LSTM、Inception、Attention
+* 迁移学习、GAN
 
 （7）控制决策：
 

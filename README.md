@@ -44,7 +44,7 @@
 * 嵌入型：正则化方法（L1正则化筛选特征）
 
 （5）特征降维：
-* PCA、LDA、SVD分解、流行学习LLE（非线性降维）、自编码器AE、T-SNE
+* PCA、LDA、SVD分解、流行学习LLE（非线性降维）、自编码器、T-SNE
 
 （6）模型训练：
 * KNN、LDA、DT、LR、NB、SVM、ANN
@@ -61,7 +61,7 @@
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_control.png" width=60% height=60% />  
 </div>
 
-**基于深度学习的处理流程：**
+**基于深度学习的处理流程：实现端到端的动作识别** 
 
 （1）离线采集sEMG，并数据预处理
 
@@ -113,13 +113,13 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 
 使用Conv1D、Conv2D、Alternate-CNN（交替卷积）、ML-CNN（多流卷积操作+大池化层）四种
 
-ML-CNN（Multi-stream convolutional operation and large pooling window CNN）
-
-NinaPro DB1中的ML-CNN类似于NLP中的TextCNN模型，没有Embedding层
+#### NinaPro DB1中的ML-CNN类似于NLP中的TextCNN模型，没有Embedding层
 
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/NinaPro-DB1-TextCNN.png" width=60% height=60% />  
 </div>
+
+#### ML-CNN（Multi-stream convolutional operation and large pooling window CNN）
 
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/SIA_delsys_MLCNN.png" width=80% height=80% />  

@@ -7,7 +7,7 @@
 * 幅值一般和肌肉运动力度成正比，能精确的反映肌肉自主收缩力
 * 超前于人体运动30-150ms产生
 
-![肌电信号生成图片](https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png)
+<div align=center><img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% /></div>
 
 **基于sEMG的动作识别一般处理流程（传统机器学习）：**
 
@@ -18,8 +18,6 @@
 * 引导方式：图片、语音
 * 采集流程：休息+动作循环采集
 * 休息时间、动作时间，动作维持的力的大小，动作的姿势尽量保持一致
-
-<div align=center><img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=50% height=50% /></div>
 
 （2）数据预处理
 * 10-350Hz带通滤波器，50Hz陷波器

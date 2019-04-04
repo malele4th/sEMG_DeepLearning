@@ -3,6 +3,8 @@
 ## 1、sEMG的基础知识
 **sEMG的产生：** 表面肌电信号是由**多个运动单元**发放的**动作电位序列**，在皮肤表面呈现的**时间上和空间上**综合叠加的结果。
 
+<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% />  
+
 **sEMG的特点：**
 * 幅值一般和肌肉运动力度成正比，能精确的反映肌肉自主收缩力
 * 超前于人体运动30-150ms产生

@@ -19,7 +19,7 @@
 * 采集流程：休息+动作循环采集
 * 休息时间、动作时间，动作维持的力的大小，动作的姿势尽量保持一致
 
-<div align=center>！<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width = 50% height = 50% />
+<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width = 50% height = 50% div align=center />
 
 （2）数据预处理
 * 10-350Hz带通滤波器，50Hz陷波器

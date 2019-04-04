@@ -3,17 +3,18 @@
 ## 1、sEMG的基础知识
 **sEMG的产生：** 表面肌电信号是由**多个运动单元**发放的**动作电位序列**，在皮肤表面呈现的**时间上和空间上**综合叠加的结果。
 
+【图1-肌电生成】
+<div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% />  
+</div>
 
 **sEMG的特点：**
 * 幅值一般和肌肉运动力度成正比，能精确的反映肌肉自主收缩力
 * 超前于人体运动30-150ms产生
 
-<div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% />  
-</div>
-
 **基于sEMG的动作识别一般处理流程（传统机器学习）：**
+
+【图2-ML流程】
 
 （1）离线采集sEMG
 * 定义动作数量、动作类型
@@ -29,6 +30,8 @@
 * 样本不均衡问题：休息动作的处理（通过阈值）
 * 特征归一化：min-max标准化、标准差归一化
 * 数据增强：加高斯噪声、翻转信号通道、时间窗+增量窗
+
+【图3-标签修正】
 
 （3）特征提取：时域、频域、时频域（tsfresh库）
 
@@ -46,20 +49,63 @@
 * AE、MLP、深层玻尔兹曼机、深层信念网络、CNN、RNN、LSTM、Inception、Attention
 * 迁移学习、GAN
 
-（7）控制决策：
+（7）在线控制决策：
+* 预测结果做平滑处理，1s判别10次，3-5次投票作为控制指令
+* 机器人正在运动时不接受指令
+* 机器人闭手状态时只接受开手类指令（康复机器人）
+
+【图4-控制决策】
+
+**基于深度学习的处理流程：**
+
+（1）离线采集sEMG，并数据预处理
+
+（2）构造肌电图像，输入给深度学习模型
+
+【图5-DL流程】
 
 ## 2、数据集 
 
-NinaPro 数据集
+### 2-1 NinaPro 数据集
 
 [NinaWeb](http://ninapro.hevs.ch/node/7)
 
 [NinaPro数据下载及数据说明](https://datadryad.org//resource/doi:10.5061/dryad.1k84r)
 
-SIA Medical Rehabilitation Robot Laboratory 数据集
+NinaPro DB1: OttoBock(100Hz)采集设备，粘贴10个电极，27位健康受试者，53种手部动作（包含休息状态）
+
+NinaPro DB2：Delsys(2000Hz)采集设备，粘贴12个电极，40位健康受试者，49种手部动作（不包含休息状态）
+
+### 2-2 SIA Medical Rehabilitation Robot Laboratory 数据集
 
 [SIA_delsys_16_movements_data数据下载](https://download.csdn.net/download/malele4th/11088765)
 
+SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极，4位健康受试者，16种手部动作
 
-【未完待续......】
+6个电极的粘贴位置：前臂的桡侧腕短伸肌、桡侧腕屈肌、肱桡肌、尺侧腕伸肌、指伸肌、指浅屈肌
+
+【图6-手部动作】
+
+## 3、方法
+
+**传统机器学习方法：**
+
+每个通道提取5个时域特征，RMS、MAV、WL、ZC、SSC
+
+**深度学习方法：**肌电图像构造
+
+* NinaPro DB1：12*10 （120ms*10channels）
+* NinaPro DB2: 200*12 （100ms*12channels）
+* SIA_delsys：200*6 （100ms*6channels）
+
+**网络结构：**
+使用Conv1D、Conv2D、Alternate-CNN（交替卷积）、ML-CNN（多流卷积操作+大池化层）四种
+
+ML-CNN（Multi-stream convolutional operation and large pooling window CNN）
+
+NinaPro DB1中的ML-CNN类似于NLP中的TextCNN模型，没有Embedding层
+
+【图7-NinaPro DB1 TextCNN】
+【图8-SIA_delsys ML-CNN】
+
 

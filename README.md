@@ -63,7 +63,7 @@
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_control.png" width=60% height=60% />  
 </div>
 
-## 1-3 基于深度学习的处理流程：实现端到端的动作识别** 
+## 1-3 基于深度学习的处理流程：实现端到端的动作识别
 
 （1）离线采集sEMG，并数据预处理
 
@@ -105,11 +105,11 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 
 ## 3-2 深度学习方法
 
-（1）NinaPro DB1：12 * 10 （120ms,10channels）
+（1）NinaPro DB1：输入图像大小 12 * 10 （120ms * 10channels）
 
-（2）NinaPro DB2: 200 * 12 （100ms,12channels）
+（2）NinaPro DB2: 输入图像大小 200 * 12 （100ms * 12channels）
 
-（3）SIA_delsys：200 * 6 （100ms,6channels）
+（3）SIA_delsys：输入图像大小 200 * 6 （100ms * 6channels）
 
 ## 3-3 网络结构
 

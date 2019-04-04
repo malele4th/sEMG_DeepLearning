@@ -7,7 +7,9 @@
 * 幅值一般和肌肉运动力度成正比，能精确的反映肌肉自主收缩力
 * 超前于人体运动30-150ms产生
 
-<div align=center><img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% /></div>
+<div align="center">
+<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% />  
+</div>
 
 **基于sEMG的动作识别一般处理流程（传统机器学习）：**
 

@@ -33,7 +33,7 @@
 * 数据增强：加高斯噪声、翻转信号通道、时间窗+增量窗
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/label_corrected.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/label_corrected.png" width=90% height=90% />  
 </div>
 
 （3）特征提取：时域、频域、时频域（tsfresh库）
@@ -103,11 +103,14 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 
 **深度学习方法：**肌电图像构造
 
-（1）NinaPro DB1：12*10 （120ms,10channels）
-（2）NinaPro DB2: 200*12 （100ms,12channels）
-（3）SIA_delsys：200*6 （100ms,6channels）
+（1）NinaPro DB1：12 * 10 （120ms,10channels）
+
+（2）NinaPro DB2: 200 * 12 （100ms,12channels）
+
+（3）SIA_delsys：200 * 6 （100ms,6channels）
 
 **网络结构：**
+
 使用Conv1D、Conv2D、Alternate-CNN（交替卷积）、ML-CNN（多流卷积操作+大池化层）四种
 
 ML-CNN（Multi-stream convolutional operation and large pooling window CNN）
@@ -119,7 +122,7 @@ NinaPro DB1中的ML-CNN类似于NLP中的TextCNN模型，没有Embedding层
 </div>
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/SIA_delsys_MLCNN.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/SIA_delsys_MLCNN.png" width=80% height=80% />  
 </div>
 
 

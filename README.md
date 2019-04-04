@@ -83,7 +83,7 @@ NinaPro DB1: OttoBock(100Hz)采集设备，粘贴10个电极，27位健康受试
 
 NinaPro DB2：Delsys(2000Hz)采集设备，粘贴12个电极，40位健康受试者，49种手部动作（不包含休息状态）
 
-### 2-2 SIA Medical Rehabilitation Robot Laboratory 数据集
+### 2-2 SIA Medical & Rehabilitation Robot Laboratory 数据集
 
 [SIA_delsys_16_movements_data数据下载](https://download.csdn.net/download/malele4th/11088765)
 

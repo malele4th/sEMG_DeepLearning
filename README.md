@@ -1,7 +1,9 @@
 # 基于表面肌电信号的动作识别（深度学习）
 
-## 1、sEMG的基础知识
-**sEMG的产生：** 表面肌电信号是由**多个运动单元**发放的**动作电位序列**，在皮肤表面呈现的**时间上和空间上**综合叠加的结果。
+# 1、sEMG的基础知识
+## 1-1 sEMG的产生
+
+表面肌电信号是由**多个运动单元**发放的**动作电位序列**，在皮肤表面呈现的**时间上和空间上**综合叠加的结果。
 
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% />  
@@ -11,7 +13,7 @@
 * 幅值一般和肌肉运动力度成正比，能精确的反映肌肉自主收缩力
 * 超前于人体运动30-150ms产生
 
-**基于sEMG的动作识别一般处理流程（传统机器学习）：**
+## 1-2 基于sEMG的动作识别一般处理流程
 
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_ML_process.png" width=60% height=60% />  
@@ -61,7 +63,7 @@
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_control.png" width=60% height=60% />  
 </div>
 
-**基于深度学习的处理流程：实现端到端的动作识别** 
+## 1-3 基于深度学习的处理流程：实现端到端的动作识别** 
 
 （1）离线采集sEMG，并数据预处理
 
@@ -71,9 +73,9 @@
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_DL_process.png" width=60% height=60% />  
 </div>
 
-## 2、数据集 
+# 2、数据集 
 
-### 2-1 NinaPro 数据集
+## 2-1 NinaPro 数据集
 
 [NinaWeb](http://ninapro.hevs.ch/node/7)
 
@@ -83,7 +85,7 @@ NinaPro DB1: OttoBock(100Hz)采集设备，粘贴10个电极，27位健康受试
 
 NinaPro DB2：Delsys(2000Hz)采集设备，粘贴12个电极，40位健康受试者，49种手部动作（不包含休息状态）
 
-### 2-2 SIA Medical & Rehabilitation Robot Laboratory 数据集
+## 2-2 SIA Medical & Rehabilitation Robot Laboratory 数据集
 
 [SIA_delsys_16_movements_data数据下载](https://download.csdn.net/download/malele4th/11088765)
 
@@ -95,13 +97,13 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/SIA_delsys_16_hand_movements.png" width=60% height=60% />  
 </div>
 
-## 3、方法
+# 3、方法
 
-**传统机器学习方法：**
+## 3-1 传统机器学习方法
 
-每个通道提取5个时域特征，RMS、MAV、WL、ZC、SSC
+每个通道提取多个特征，RMS、MAV、WL、ZC、SSC等
 
-**深度学习方法：**肌电图像构造
+## 3-2 深度学习方法
 
 （1）NinaPro DB1：12 * 10 （120ms,10channels）
 
@@ -109,7 +111,7 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 
 （3）SIA_delsys：200 * 6 （100ms,6channels）
 
-**网络结构：**
+## 3-3 网络结构
 
 使用Conv1D、Conv2D、Alternate-CNN（交替卷积）、ML-CNN（多流卷积操作+大池化层）四种
 

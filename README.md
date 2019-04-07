@@ -19,6 +19,7 @@
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_ML_process.png" width=60% height=60% />  
 </div>
+<div align="center"> 图2 基于机器学习的肌电识别处理流程</div>
 
 （1）离线采集sEMG
 * 定义动作数量、动作类型
@@ -38,6 +39,7 @@
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/label_corrected.png" width=90% height=90% />  
 </div>
+<div align="center"> 图3 基于最大面积法的动作标签修正(红线表示未修正的标签，黑线表示修正后的标签)</div>
 
 （3）特征提取：时域、频域、时频域（tsfresh库）
 
@@ -63,6 +65,7 @@
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_control.png" width=60% height=60% />  
 </div>
+<div align="center"> 图4 肌电控制手部康复机器人</div>
 
 ## 1-3 基于深度学习的处理流程：实现端到端的动作识别
 
@@ -73,6 +76,7 @@
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_DL_process.png" width=60% height=60% />  
 </div>
+<div align="center"> 图5 基于深度学习的肌电识别处理流程</div>
 
 # 2、数据集 
 
@@ -86,7 +90,7 @@ NinaPro DB1: OttoBock(100Hz)采集设备，粘贴10个电极，27位健康受试
 
 NinaPro DB2：Delsys(2000Hz)采集设备，粘贴12个电极，40位健康受试者，49种手部动作（不包含休息状态）
 
-## 2-2 SIA Medical & Rehabilitation Robot Laboratory 数据集
+## 2-2 Medical & Rehabilitation Robot Laboratory of SIA 数据集
 
 [SIA_delsys_16_movements_data数据下载](https://download.csdn.net/download/malele4th/11088765)
 
@@ -97,6 +101,7 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/SIA_delsys_16_hand_movements.png" width=60% height=60% />  
 </div>
+<div align="center"> 图6 16手部动作</div>
 
 # 3、方法
 
@@ -121,11 +126,13 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/NinaPro-DB1-TextCNN.png" width=60% height=60% />  
 </div>
+<div align="center"> 图7 应用于肌电识别的TextCNN模型</div>
 
 #### ML-CNN（Multi-stream convolutional operation and large pooling window CNN）
 
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/SIA_delsys_MLCNN.png" width=80% height=80% />  
 </div>
+<div align="center"> 图8 应用于肌电识别的ML-CNN模型</div>
 
 

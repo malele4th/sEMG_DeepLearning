@@ -8,6 +8,7 @@
 <div align="center">
 <img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% />  
 </div>
+<div align="center"> 图1 肌电信号生成</div>
 
 **sEMG的特点：**
 * 幅值一般和肌肉运动力度成正比，能精确的反映肌肉自主收缩力

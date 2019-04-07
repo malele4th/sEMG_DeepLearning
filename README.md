@@ -138,7 +138,7 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 <div align="center"> 图8 应用于肌电识别的ML-CNN模型</div>
 
 ##### 有感兴趣的同学欢迎交流：连续方式如下：
-email：malele19931203@163.com
+email：malele19931203@.com
 
 QQ：1173414827
 

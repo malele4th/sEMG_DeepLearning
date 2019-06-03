@@ -140,6 +140,5 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 ##### 有感兴趣的同学欢迎交流：联系方式如下：
 email：malele19931203@gmail.com
 
-QQ：1173414827
 
 

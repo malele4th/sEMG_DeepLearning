@@ -6,7 +6,7 @@
 表面肌电信号是由**多个运动单元**发放的**动作电位序列**，在皮肤表面呈现的**时间上和空间上**综合叠加的结果。
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_generation.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/tree/master/picture/sEMG_generation.png" width=60% height=60% />  
 </div>
 <div align="center"> 图1 肌电信号生成</div>
 
@@ -17,7 +17,7 @@
 ## 1-2 基于sEMG的动作识别一般处理流程
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_ML_process.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/tree/master/picture/sEMG_ML_process.png" width=60% height=60% />  
 </div>
 <div align="center"> 图2 基于机器学习的肌电识别处理流程</div>
 
@@ -37,7 +37,7 @@
 * 数据增强：加高斯噪声、翻转信号通道、时间窗+增量窗
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/label_corrected.png" width=90% height=90% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/tree/master/picture/label_corrected.png" width=90% height=90% />  
 </div>
 <div align="center"> 图3 基于最大面积法的动作标签修正(红线表示未修正的标签，黑线表示修正后的标签)</div>
 
@@ -65,7 +65,7 @@
 * 机器人闭手状态时只接受开手类指令（康复机器人）
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_control.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/tree/master/picture/sEMG_control.png" width=60% height=60% />  
 </div>
 <div align="center"> 图4 肌电控制手部康复机器人</div>
 
@@ -76,7 +76,7 @@
 （2）构造肌电图像，输入给深度学习模型
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/sEMG_DL_process.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/tree/master/picture/sEMG_DL_process.png" width=60% height=60% />  
 </div>
 <div align="center"> 图5 基于深度学习的肌电识别处理流程</div>
 
@@ -101,7 +101,7 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 6个电极的粘贴位置：前臂的桡侧腕短伸肌、桡侧腕屈肌、肱桡肌、尺侧腕伸肌、指伸肌、指浅屈肌
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/SIA_delsys_16_hand_movements.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/tree/master/picture/SIA_delsys_16_hand_movements.png" width=60% height=60% />  
 </div>
 <div align="center"> 图6 16手部动作</div>
 
@@ -126,7 +126,7 @@ SIA_delsys_16_movements数据集：Delsys(2000Hz)采集设备，粘贴6个电极
 #### NinaPro DB1中的ML-CNN类似于NLP中的TextCNN模型，没有Embedding层
 
 <div align="center">
-<img src="https://github.com/malele4th/sEMG_DeepLearning/blob/master/picture/NinaPro-DB1-TextCNN.png" width=60% height=60% />  
+<img src="https://github.com/malele4th/sEMG_DeepLearning/tree/master/picture/NinaPro-DB1-TextCNN.png" width=60% height=60% />  
 </div>
 <div align="center"> 图7 应用于肌电识别的TextCNN模型</div>
 
